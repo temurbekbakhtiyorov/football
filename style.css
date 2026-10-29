@@ -1,0 +1,342 @@
+/* ===== Umumiy stil ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* .rang:hover{
+  background-color: red;
+  border-radius: 12px 45px;
+} */
+
+/* ===== Header ===== */
+header {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+  padding: 18px 0;
+  border-bottom: 3px solid #22c55e;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #23c73c;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #f8fafc;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #1e293b;
+  background-color: #22c55e;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  /* transition: transform 0.2s, background 0.2s; */
+}
+
+
+nav a:hover {
+  background: #cbd10c;
+  color: #b84a22;
+  border-radius: 5px 15px;
+   transform: translateY(-2px);
+}
+
+/* nav .active {
+  color: #1e293b;
+  background-color: #22c55e;
+  border-radius: 15px 5px;
+} */
+
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)),
+              url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200') center/cover;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #f8fafc;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #22c55e;
+  color: #0f172a;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #f8fafc;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #22c55e;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== Cards grid ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #334155;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.25);
+  border-color: #22c55e;
+}
+
+.card-img {
+  height: 200px;
+  background: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card-body h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  color: #f8fafc;
+}
+
+.card-body p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.card-body .tag {
+  display: inline-block;
+  background: #0f172a;
+  color: #22c55e;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ===== Player / Team detail page ===== */
+.detail-header {
+  background: #1e293b;
+  padding: 40px 0;
+  border-bottom: 3px solid #22c55e;
+}
+
+.detail-header .container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.detail-photo {
+  width: 220px;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 4px solid #22c55e;
+  background: #334155;
+  flex-shrink: 0;
+}
+
+.detail-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-info h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.detail-info .position {
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.stat-box {
+  background: #0f172a;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 90px;
+}
+
+.stat-box .num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #22c55e;
+}
+
+.stat-box .label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.bio {
+  padding: 50px 0;
+}
+
+.bio h2 {
+  margin-bottom: 20px;
+  color: #f8fafc;
+}
+
+.bio p {
+  color: #cbd5e1;
+  margin-bottom: 15px;
+  max-width: 800px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 25px 20px;
+  border-top: 1px solid #1e293b;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #22c55e;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .detail-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+}
